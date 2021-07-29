@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change</title>
+    <script type='text/javascript'>
+        function changeBG() {
+            let selectedBGColor = document.getElementById("bgchoice").value;
+            document.body.style.backgroundColor = selectedBGColor;
+        }
+    </script>
+    <style>
+        .change_color {
+            width: 1000px;
+            margin: 60px auto;
+            font-size: 35px;
+        }
+
+        .h {
+            margin-bottom: 20px;
+        }
+
+        select {
+            height: 35px;
+            width: 250px;
+            border-radius: 10px;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="change_color">
+        <div class="h">Выберите тему:</div>
+        <select id="bgchoice" onchange="changeBG()">
+            <option>Можно выбрать</option>
+            <option value="#e2ecd7 ">Sherwin Williams</option>
+            <option value="#dcd2fc">Бледно-синий</option>
+            <option value="#f3c4d0">Светло-розовый</option>
+            <option value="#e5ccc9">Пыльная буря</option>
+            <option value="#cac4b0">Серый шелк</option>
+        </select>
+        <h1> Это мой веб-сайт </h1>
+    </div>
+</body>
+
+</html>
