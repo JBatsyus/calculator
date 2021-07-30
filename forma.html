@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma</title>
+    <script src="/forma.js"></script>
+    <style>
+        body {
+            background-color: #ddd4d463;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        .box {
+            max-width: 400px;
+            margin: 10px auto;
+            background-color: #e7d3e4ad;
+            border-radius: 10px;
+            box-shadow: 3px 2px #574b4a;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        h1,
+        .title {
+            text-align: center;
+        }
+
+        /* Стилизация полей */
+        input {
+            border-radius: 10px;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #fcfcfca6;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* Стили кнопок */
+        button {
+            background-color: #c08dad;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            /* активный курсор */
+            cursor: pointer;
+            /* width: 100%; */
+            opacity: 0.9;
+            border-radius: 10px;
+        }
+
+
+        .cancelbtn {
+            padding: 14px 20px;
+            background-color: #574b4a;
+        }
+
+        /* Кнопки */
+        .cancelbtn,
+        .signupbtn {
+            width: 47%;
+        }
+
+        .buttbox {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        #errorMessage_user_name,
+        #errorMessage_user_email,
+        #errorMessage_user_username,
+        #errorMessage_user_password {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form name="form">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p class="title">Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="name"><b>Full name</b></label>
+                <input type="text" placeholder="Name..." id="fullname">
+                <div id="errorMessage_user_name"></div>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" id="emailbox">
+                <div id="errorMessage_user_email"></div>
+
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Username" id="logname">
+                <div id="errorMessage_user_username"></div>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="**********" id="pswd">
+                <div id="errorMessage_user_password"></div>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="**********" name="psw-repeat">
+
+                <label>
+                    <input type="checkbox" checked="checked" style="margin-bottom:15px"> Remember me
+                </label>
+                <p>By creating an account you agree to our <a href="#"
+                        style="color:rgb(170, 109, 152)">ItGirlSchool</a>.</p>
+
+
+                <div class="buttbox">
+
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" onclick="check()" class="signupbtn">Sign Up</button>
+                </div>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
