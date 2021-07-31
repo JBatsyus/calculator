@@ -1,8 +1,8 @@
 function check() {
     let name = document.getElementById('fullname');
     let email = document.getElementById('emailbox');
-    let password = document.getElementsById('pswd');
-    let login = document.getElementsById('logname');
+    let password = document.getElementById('pswd');
+    let login = document.getElementById('logname');
     document.getElementById('errorMessage_user_name').innerHTML = "";
 
     let form  = document.getElementsByTagName('form')[0];
@@ -32,7 +32,7 @@ function check() {
     }
 
     if (form.isValid == true) {
-        let welcome_user=user_name.value;
+        let welcome_user=fullname.value;
         alert(`Добро пожаловать, ${welcome_user}!`)
     }
 }
